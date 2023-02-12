@@ -1,0 +1,182 @@
+.header__library-style {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 49px 20px 60px;
+  height: 230px;
+  font-family: $primary-font-family;
+  font-weight: $primary-font-weight;
+  color: $primary-bgc;
+  background-color: #2a2a2a;
+  background-image: linear-gradient(90deg, $header-bgc, $header-bgc),
+    url(../images/bg-image-header-my-library-mobile-2x.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  // @media screen and (min-width: $tablet){
+  //   padding: 45px 32px;
+  // }
+}
+
+.header__library {
+  background-color: $primary-text-color;
+  background-image: linear-gradient(90deg, $header-bgc, $header-bgc),
+    url(../images/bg-image-header-my-library-desctop-1x.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    background-image: linear-gradient(to right, $header-bgc, $header-bgc),
+      url(../images/bg-image-header-my-library-tablet-2x.jpg);
+  }
+  @media screen and (min-width: $desctop) {
+    background-image: linear-gradient(to right, $header-bgc),
+      url(../images/bg-image-header-my-library-desctop-2x.jpg);
+  }
+}
+.header__library-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 37px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 45px;
+  }
+}
+
+//Buttons
+.storage {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    height: 44px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 16px;
+
+    @media screen and (min-width: $tablet) and (max-width: 1279px) {
+      margin-right: 15px;
+      gap: 32px;
+    }
+
+    @media screen and (max-width: 767px) {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: block;
+  }
+}
+
+.button__library {
+  display: inline-block;
+  cursor: pointer;
+  font-size: $primary-font-size;
+  padding: 14px 36px 12px;
+  min-width: 130px;
+  font-weight: $primary-font-weight;
+  line-height: 1.33333;
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary-bgc;
+  background: transparent;
+  border: 1px solid $primary-bgc;
+  border-radius: 5px;
+}
+.button__library {
+  @media screen and (max-width: 767px) {
+    width: 130px;
+    padding: 14px 12px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 152px;
+  }
+
+  @media screen and (min-width: $desctop) {
+    width: 148px;
+  }
+  &:hover,
+  &:focus,
+  &.is-current {
+    background-color: $accent-color;
+  }
+}
+.studio-line {
+  position: relative;
+  &::after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2.86px;
+    display: block;
+    background-color: $current-link-under-line-color;
+  }
+}
+
+// logo
+.header__library-logo {
+  display: flex;
+  align-self: flex-end;
+}
+.header__library-logo {
+  @media screen and (max-width: 767px) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: $desctop) {
+    margin-right: auto;
+  }
+}
+
+.header__library-logo-svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  align-self: center;
+  stroke: #818181;
+  transition-property: stroke;
+  transition-duration: 0.25s;
+  transition-timing-function: $timing-function;
+}
+.header__library-logo-text {
+  font-size: 30px;
+  line-height: 1.72;
+  font-weight: $primary-font-weight;
+  color: $primary-bgc;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.header__library-logo-svg {
+  @media screen and (min-width: $tablet) and (max-width: $desctop) {
+    margin-right: 10px;
+  }
+}
+// Menu
+.menu__library-list {
+  display: flex;
+  gap: 39px;
+}
+.menu__item {
+  position: relative;
+}
+
+.menu__link {
+  font-size: $primary-font-size;
+  line-height: 1.16;
+  text-transform: uppercase;
+  color: $primary-bgc;
+}
